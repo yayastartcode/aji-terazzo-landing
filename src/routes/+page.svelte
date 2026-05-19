@@ -37,6 +37,15 @@
     'Poles akhir sampai permukaan terlihat bersih dan elegan'
   ];
 
+  const gallerySlots = [
+    { title: 'Detail motif terazzo', note: 'Siap diganti foto close-up motif' },
+    { title: 'Area lantai / dinding', note: 'Siap diganti foto proyek lapangan' },
+    { title: 'Meja atau wastafel', note: 'Siap diganti foto custom piece' },
+    { title: 'Sebelum poles', note: 'Siap diganti foto before' },
+    { title: 'Sesudah poles', note: 'Siap diganti foto after' },
+    { title: 'Finishing akhir', note: 'Siap diganti foto hasil final' }
+  ];
+
   const faqs = [
     {
       q: 'Bisa untuk villa, cafe, atau hotel?',
@@ -73,6 +82,7 @@
       </a>
       <div class="hidden items-center gap-7 text-sm font-bold text-[#5b4c40] md:flex">
         <a class="hover:text-[#215452]" href="#layanan">Layanan</a>
+        <a class="hover:text-[#215452]" href="#galeri">Galeri</a>
         <a class="hover:text-[#215452]" href="#proses">Proses</a>
         <a class="hover:text-[#215452]" href="#faq">FAQ</a>
       </div>
@@ -177,6 +187,35 @@
     </div>
   </section>
 
+  <section id="galeri" class="px-5 pb-20 md:px-8">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-8 md:grid-cols-[.9fr_1.1fr] md:items-end">
+        <div>
+          <p class="text-sm font-black uppercase tracking-[.24em] text-[#b06d36]">Galeri proyek</p>
+          <h2 class="mt-3 text-4xl font-black tracking-[-.04em] md:text-6xl">Slot foto siap diisi hasil kerja asli.</h2>
+        </div>
+        <p class="text-lg leading-8 text-[#665749]">
+          Nanti kirim gambar proyek yang mau ditampilkan. Bagian ini tinggal diganti dengan foto sebelum-sesudah poles, detail motif, pemasangan, dan finishing akhir.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {#each gallerySlots as item, index}
+          <article class="group overflow-hidden rounded-[2rem] border border-[#2d241d]/10 bg-[#fffaf2] shadow-sm transition hover:-translate-y-1 hover:shadow-2xl">
+            <div class="relative aspect-[4/3] terrazzo-grain bg-[#d8c5ad]">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(255,255,255,.55),transparent_26%),linear-gradient(to_top,rgba(45,36,29,.72),transparent_55%)]"></div>
+              <div class="absolute left-4 top-4 rounded-full bg-white/80 px-3 py-1 text-xs font-black uppercase tracking-[.14em] text-[#215452] backdrop-blur">Foto {index + 1}</div>
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <h3 class="text-xl font-black tracking-[-.02em]">{item.title}</h3>
+                <p class="mt-1 text-sm font-bold text-white/75">{item.note}</p>
+              </div>
+            </div>
+          </article>
+        {/each}
+      </div>
+    </div>
+  </section>
+
   <section id="proses" class="px-5 py-20 md:px-8">
     <div class="mx-auto max-w-7xl">
       <div class="grid gap-10 md:grid-cols-[.9fr_1.1fr] md:items-start">
@@ -247,4 +286,15 @@
       </div>
     </div>
   </footer>
+
+  <a
+    href={waLink}
+    class="fixed bottom-5 right-5 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl shadow-[#25D366]/35 ring-4 ring-white/70 transition hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#128C7E]/40 md:bottom-7 md:right-7 md:h-[72px] md:w-[72px]"
+    aria-label="Chat Aji Terazzo via WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" class="h-9 w-9" aria-hidden="true" fill="currentColor">
+      <path d="M19.11 17.47c-.28-.14-1.66-.82-1.92-.91-.26-.1-.45-.14-.64.14-.19.28-.73.91-.9 1.1-.17.19-.33.21-.61.07-.28-.14-1.18-.43-2.24-1.38-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.64-1.55-.88-2.12-.23-.56-.47-.48-.64-.49h-.54c-.19 0-.49.07-.75.35-.26.28-.99.97-.99 2.36s1.01 2.74 1.15 2.93c.14.19 1.99 3.04 4.83 4.26.67.29 1.2.46 1.61.59.68.22 1.3.19 1.79.12.55-.08 1.66-.68 1.9-1.34.23-.66.23-1.22.16-1.34-.07-.12-.26-.19-.54-.33z" />
+      <path d="M26.71 5.29A14.93 14.93 0 0 0 16.05.88C7.75.88 1 7.63 1 15.93c0 2.65.69 5.24 2 7.52L.88 31.12l7.86-2.06a15.02 15.02 0 0 0 7.31 1.86h.01c8.3 0 15.05-6.75 15.05-15.05 0-4.02-1.56-7.8-4.4-10.58zM16.06 28.38h-.01a12.5 12.5 0 0 1-6.36-1.74l-.46-.27-4.66 1.22 1.24-4.54-.3-.47a12.43 12.43 0 0 1-1.9-6.65c0-6.89 5.61-12.5 12.51-12.5 3.34 0 6.47 1.3 8.83 3.66a12.42 12.42 0 0 1 3.66 8.83c0 6.9-5.61 12.51-12.55 12.51z" />
+    </svg>
+  </a>
 </main>
