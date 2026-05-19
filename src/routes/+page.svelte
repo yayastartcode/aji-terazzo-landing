@@ -122,7 +122,17 @@
       >Chat WA</a>
     </nav>
 
-    <div id="top" class="relative z-10 mx-auto grid max-w-7xl gap-10 px-5 pb-20 pt-8 md:grid-cols-[1.08fr_.92fr] md:px-8 md:pb-28 md:pt-16">
+    <div class="relative z-10 mx-auto max-w-5xl px-5 pt-3 md:px-8">
+      <div class="mx-auto overflow-hidden rounded-[1.75rem] border border-[#2d241d]/10 bg-white/65 p-2 shadow-2xl shadow-[#2d241d]/10 backdrop-blur">
+        <img
+          src="/brand/aji-terazzo-banner.jpg"
+          alt="Banner Aji Terazzo, jasa pembuatan, pasang, dan poles terazzo"
+          class="mx-auto w-full rounded-[1.35rem] object-cover"
+        />
+      </div>
+    </div>
+
+    <div id="top" class="relative z-10 mx-auto grid max-w-7xl gap-10 px-5 pb-20 pt-10 md:grid-cols-[1.08fr_.92fr] md:px-8 md:pb-28 md:pt-16">
       <div class="reveal-up max-w-3xl">
         <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-[#d8b58d] bg-white/55 px-4 py-2 text-sm font-bold text-[#6e4b32] shadow-sm backdrop-blur">
           <span class="h-2 w-2 rounded-full bg-[#d88b4a]"></span>
