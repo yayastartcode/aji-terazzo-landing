@@ -38,12 +38,42 @@
   ];
 
   const gallerySlots = [
-    { title: 'Detail motif terazzo', note: 'Siap diganti foto close-up motif' },
-    { title: 'Area lantai / dinding', note: 'Siap diganti foto proyek lapangan' },
-    { title: 'Meja atau wastafel', note: 'Siap diganti foto custom piece' },
-    { title: 'Sebelum poles', note: 'Siap diganti foto before' },
-    { title: 'Sesudah poles', note: 'Siap diganti foto after' },
-    { title: 'Finishing akhir', note: 'Siap diganti foto hasil final' }
+    {
+      title: 'Lantai terazzo poles glossy',
+      note: 'Permukaan cream dengan chip halus dan refleksi bersih',
+      src: '/gallery/terazzo-polished-floor-01.jpg',
+      alt: 'Lantai terazzo cream yang sudah dipoles mengkilap di area interior modern'
+    },
+    {
+      title: 'Wastafel terazzo minimalis',
+      note: 'Basin putih speckled dengan fixture hitam modern',
+      src: '/gallery/terazzo-vanity-basin-01.jpg',
+      alt: 'Wastafel terazzo putih minimalis dengan faucet hitam dan dekorasi bathroom modern'
+    },
+    {
+      title: 'Vanity kayu dan basin terazzo',
+      note: 'Kombinasi warm wood, motif terazzo, dan tanaman hijau',
+      src: '/gallery/terazzo-wood-vanity-01.jpg',
+      alt: 'Vanity kayu dengan wastafel terazzo putih bermotif chip warna hangat dan tanaman hijau'
+    },
+    {
+      title: 'Bathroom vanity terazzo',
+      note: 'Finishing lantai, backsplash, dan vanity untuk ruang mandi premium',
+      src: '/gallery/terazzo-project-04.jpg',
+      alt: 'Bathroom modern dengan lantai dan backsplash terazzo, vanity kayu, cermin bulat, dan toilet dinding'
+    },
+    {
+      title: 'Floating vanity terazzo',
+      note: 'Meja wastafel putih dengan chip warna dan frame hitam',
+      src: '/gallery/terazzo-project-05.jpg',
+      alt: 'Floating vanity terazzo putih dengan sink rectangular, faucet dinding, dan frame metal hitam'
+    },
+    {
+      title: 'Countertop terazzo panjang',
+      note: 'Permukaan putih glossy untuk island interior dekat area kaca',
+      src: '/gallery/terazzo-project-06.jpg',
+      alt: 'Countertop terazzo putih glossy panjang dengan shelving built-in di interior dekat jendela besar'
+    }
   ];
 
   const faqs = [
@@ -192,22 +222,23 @@
       <div class="grid gap-8 md:grid-cols-[.9fr_1.1fr] md:items-end">
         <div>
           <p class="text-sm font-black uppercase tracking-[.24em] text-[#b06d36]">Galeri proyek</p>
-          <h2 class="mt-3 text-4xl font-black tracking-[-.04em] md:text-6xl">Slot foto siap diisi hasil kerja asli.</h2>
+          <h2 class="mt-3 text-4xl font-black tracking-[-.04em] md:text-6xl">Galeri hasil terazzo untuk inspirasi proyek kamu.</h2>
         </div>
         <p class="text-lg leading-8 text-[#665749]">
-          Nanti kirim gambar proyek yang mau ditampilkan. Bagian ini tinggal diganti dengan foto sebelum-sesudah poles, detail motif, pemasangan, dan finishing akhir.
+          Lihat contoh aplikasi terazzo untuk lantai, wastafel, vanity, countertop, dan area interior premium. Foto bisa terus ditambah sesuai portofolio terbaru.
         </p>
       </div>
 
       <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {#each gallerySlots as item, index}
           <article class="group overflow-hidden rounded-[2rem] border border-[#2d241d]/10 bg-[#fffaf2] shadow-sm transition hover:-translate-y-1 hover:shadow-2xl">
-            <div class="relative aspect-[4/3] terrazzo-grain bg-[#d8c5ad]">
-              <div class="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(255,255,255,.55),transparent_26%),linear-gradient(to_top,rgba(45,36,29,.72),transparent_55%)]"></div>
-              <div class="absolute left-4 top-4 rounded-full bg-white/80 px-3 py-1 text-xs font-black uppercase tracking-[.14em] text-[#215452] backdrop-blur">Foto {index + 1}</div>
+            <div class="relative aspect-[4/3] bg-[#d8c5ad]">
+              <img src={item.src} alt={item.alt} loading="lazy" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#2d241d]/82 via-[#2d241d]/10 to-transparent"></div>
+              <div class="absolute left-4 top-4 rounded-full bg-white/85 px-3 py-1 text-xs font-black uppercase tracking-[.14em] text-[#215452] backdrop-blur">Foto {index + 1}</div>
               <div class="absolute bottom-4 left-4 right-4 text-white">
                 <h3 class="text-xl font-black tracking-[-.02em]">{item.title}</h3>
-                <p class="mt-1 text-sm font-bold text-white/75">{item.note}</p>
+                <p class="mt-1 text-sm font-bold text-white/80">{item.note}</p>
               </div>
             </div>
           </article>
